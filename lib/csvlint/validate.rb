@@ -397,11 +397,11 @@ module Csvlint
         nil
       end
 
-      if message.match(/^Unquoted fields do not allow new line/i)
+      if message.match?(/^Unquoted fields do not allow new line/i)
         return :line_breaks
       end
 
-      if message.match(/^New line must be/i)
+      if message.match?(/^New line must be/i)
         return :inconsistent_line_breaks
       end
 
